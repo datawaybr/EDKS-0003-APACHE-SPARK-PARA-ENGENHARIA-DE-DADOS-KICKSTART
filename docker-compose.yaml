@@ -1,0 +1,9 @@
+version: "3"
+services:
+  pyspark:
+    image: "jupyter/pyspark-notebook:spark-3.3.2"
+    volumes:
+      - /home/tiao/projects/dataway/app:/home/app/
+    ports:
+      - 8888:8888
+    working_dir: /home/app/

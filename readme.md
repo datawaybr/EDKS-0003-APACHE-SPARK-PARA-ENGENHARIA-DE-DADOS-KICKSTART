@@ -22,11 +22,15 @@ Para começar, siga estas etapas:
 # se estiver em um ambiente linux basta utilizar o comando PWD
 # por fim basta executar o docker-compose e identificar o link de acesso da UI
 docker-compose up
-
-#PS: caso o seu docker-compose não rodar execute primeiramente o comando 
-docker pull jupyter/pyspark-notebook:spark-3.3.2
 ```
 3. Abra os notebooks na pasta app e siga as instruções para explorar e processar os dados da ANAC.
+
+4. Para inserção de dados no banco de dados vamos precisar que esteja instalado em sua maquina os seguintes packges
+```sh
+sudo apt install build-essential
+
+pip install psycopg2 faker_airtravel faker_vehicle sqlalchemy faker argparse
+```
 
 
 ## Esperamos que você aproveite a mentoria de Apache Spark e a exploração dos dados neste projeto!

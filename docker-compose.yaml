@@ -7,3 +7,23 @@ services:
     ports:
       - 8888:8888
     working_dir: /home/app/
+    depends_on:
+      - postgres
+    networks:
+      - minha-rede-master
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: data-way-poc
+      POSTGRES_USER: admin-dataway
+      POSTGRES_PASSWORD: IloveDataway
+    ports:
+      - "5432:5432" 
+    volumes:
+      - /home/tiao/projects/dataway/app/data_db:/var/lib/postgresql/data
+    networks:
+      - minha-rede-master
+
+networks:
+  minha-rede-master:

@@ -27,7 +27,11 @@ docker-compose up
 
 4. Para inserção de dados no banco de dados vamos precisar que esteja instalado em sua maquina os seguintes packges
 ```sh
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com AA16FCBCA621E701
+sudo apt update
+sudo apt upgrade
 sudo apt install build-essential
+sudo apt-get install libpq-dev
 
 pip install psycopg2 faker_airtravel faker_vehicle sqlalchemy faker argparse
 ```

@@ -1,9 +1,8 @@
 version: "3"
 services:
   pyspark:
-    build:
-      context: .
-      dockerfile: Dockerfile  # Specify the custom Dockerfile
+    image: "jupyter/pyspark-notebook:spark-3.3.2"
+    working_dir: /home/app/
     volumes:
       - /home/tiao/EDKS-0003-APACHE-SPARK-PARA-ENGENHARIA-DE-DADOS-KICKSTART/app/:/home/app/
     ports:
